@@ -1,33 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-16T14:22:43 IST" name="Default suite" finished-at="2024-05-16T14:22:56 IST" duration-ms="13534">
+  <suite started-at="2024-05-22T15:06:20 IST" name="Default suite" finished-at="2024-05-22T15:06:55 IST" duration-ms="34896">
     <groups>
     </groups>
-    <test started-at="2024-05-16T14:22:43 IST" name="Default test" finished-at="2024-05-16T14:22:56 IST" duration-ms="13534">
+    <test started-at="2024-05-22T15:06:20 IST" name="Default test" finished-at="2024-05-22T15:06:55 IST" duration-ms="34896">
       <class name="com.qa.opencart.tests.LoginPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@57a48985]" started-at="2024-05-16T14:22:43 IST" name="setUp" finished-at="2024-05-16T14:22:54 IST" duration-ms="11013" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@57a48985]" started-at="2024-05-22T15:06:20 IST" name="setUp" finished-at="2024-05-22T15:06:41 IST" duration-ms="21792" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginPageTitleTest()[pri:1, instance:com.qa.opencart.tests.LoginPageTest@57a48985]" started-at="2024-05-16T14:22:54 IST" name="loginPageTitleTest" finished-at="2024-05-16T14:22:54 IST" duration-ms="185" status="PASS">
+        <test-method signature="loginPageTitleTest()[pri:1, instance:com.qa.opencart.tests.LoginPageTest@57a48985]" started-at="2024-05-22T15:06:42 IST" name="loginPageTitleTest" finished-at="2024-05-22T15:06:42 IST" duration-ms="304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageTitleTest -->
-        <test-method signature="loginPageUrlTest()[pri:2, instance:com.qa.opencart.tests.LoginPageTest@57a48985]" started-at="2024-05-16T14:22:55 IST" name="loginPageUrlTest" finished-at="2024-05-16T14:22:55 IST" duration-ms="28" status="PASS">
+        <test-method signature="loginPageUrlTest()[pri:2, instance:com.qa.opencart.tests.LoginPageTest@57a48985]" started-at="2024-05-22T15:06:42 IST" name="loginPageUrlTest" finished-at="2024-05-22T15:06:52 IST" duration-ms="10265" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for url to contain "route=account/logout". Current url: "https://naveenautomationlabs.com/opencart/index.php?route=account/login" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.209, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52564}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52564/devtoo..., se:cdpVersion: 124.0.6367.209, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2da812ea23f95f46dfca2a928b1ed88d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "route=account/logout". Current url: "https://naveenautomationlabs.com/opencart/index.php?route=account/login" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.209, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52564}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52564/devtoo..., se:cdpVersion: 124.0.6367.209, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2da812ea23f95f46dfca2a928b1ed88d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at com.qa.opencart.utils.ElementUtil.waitForURLContainsAndFetch(ElementUtil.java:262)
+at com.qa.opencart.pages.LoginPage.getLoginUrl(LoginPage.java:39)
+at com.qa.opencart.tests.LoginPageTest.loginPageUrlTest(LoginPageTest.java:18)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageUrlTest -->
-        <test-method signature="forgotpassLinkExistTest()[pri:3, instance:com.qa.opencart.tests.LoginPageTest@57a48985]" started-at="2024-05-16T14:22:55 IST" name="forgotpassLinkExistTest" finished-at="2024-05-16T14:22:55 IST" duration-ms="115" status="PASS">
+        <test-method signature="forgotpassLinkExistTest()[pri:3, instance:com.qa.opencart.tests.LoginPageTest@57a48985]" started-at="2024-05-22T15:06:52 IST" name="forgotpassLinkExistTest" finished-at="2024-05-22T15:06:53 IST" duration-ms="150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotpassLinkExistTest -->
-        <test-method signature="loginTest()[pri:4, instance:com.qa.opencart.tests.LoginPageTest@57a48985]" started-at="2024-05-16T14:22:55 IST" name="loginTest" finished-at="2024-05-16T14:22:56 IST" duration-ms="1019" status="PASS">
+        <test-method signature="loginTest()[pri:4, instance:com.qa.opencart.tests.LoginPageTest@57a48985]" started-at="2024-05-22T15:06:53 IST" name="loginTest" finished-at="2024-05-22T15:06:54 IST" duration-ms="1405" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@57a48985]" started-at="2024-05-16T14:22:56 IST" name="tearDown" finished-at="2024-05-16T14:22:56 IST" duration-ms="619" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@57a48985]" started-at="2024-05-22T15:06:54 IST" name="tearDown" finished-at="2024-05-22T15:06:55 IST" duration-ms="458" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
