@@ -13,7 +13,9 @@ public class AccountsPageTest extends BaseTest {
 
 	@BeforeClass
 	public void accPageSetU() {
-		accountsPage = loginPage.doLogin("pravinjunghare01@gmail.com", "Test@1234");
+		//accountsPage = loginPage.doLogin("pravinjunghare01@gmail.com", "Test@1234");
+		accountsPage = loginPage.doLogin(prop.getProperty("username").trim(),prop.getProperty("password").trim());
+
 	}
 
 	@Test
@@ -40,5 +42,15 @@ public class AccountsPageTest extends BaseTest {
 		Assert.assertEquals(actualAccHeaderList.size(), AppConstants.ACCOUNTS_PAGE_HEADERCOUNT);
 
 	}
+	
+	@Test
+	public void accountHeaderValueTest() {
+		List<String> actualAccHeaderList = accountsPage.getAccountsPageHeaderList();
+		System.out.println("Acc page actual headers:----" + actualAccHeaderList);
+		System.out.println("Acc page expected headers:---- "+AppConstants.EXPECTED_ACCOUNTPAGE_HEADERS_LIST);
+		Assert.assertEqualsNoOrder(actualAccHeaderList, AppConstants.EXPECTED_ACCOUNTPAGE_HEADERS_LIST);
+
+	}
+
 
 }

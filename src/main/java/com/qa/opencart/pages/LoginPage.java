@@ -53,9 +53,11 @@ public class LoginPage {
 
 	public AccountsPage doLogin(String un, String pwd) {
 
-		//elementUtil.waitForElementVisible(emailId, 10).sendKeys(un);
+		
+		System.out.println("App Credientials are :"+ un+":"+ pwd);
 		
 		elementUtil.waitForElementVisible(emailId, AppConstants.DEFAULT_SHORT_TIMEOUT).sendKeys(un);
+		//elementUtil.waitForElementVisible(emailId, 10).sendKeys(un);
 		elementUtil.doSendKeys(password, pwd);
 		elementUtil.doClick(loginBtn);
 		return new AccountsPage(driver);
